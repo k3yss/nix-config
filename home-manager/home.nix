@@ -82,9 +82,6 @@ in
     initExtra = ''
             export LC_ALL=en_US.UTF-8
             export LANG=en_US.UTF-8
-      			  # Cargo environment
-      		. "$HOME/.cargo/env"
-      		
       		# Homebrew environment
       		eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -104,5 +101,4 @@ in
 
   programs.home-manager.enable = true;
 
-  nixpkgs.config.allowUnfree = true;
 }

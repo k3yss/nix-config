@@ -12,10 +12,9 @@ local function find_rust_bin()
     local bin = "/Users/rishi/sandbox/cachix/devenv/target/debug/devenv"
     if vim.fn.executable(bin) == 1 then
         return bin
-    else
-        vim.notify("devenv binary not found at " .. bin, vim.log.levels.ERROR)
-        return nil
     end
+	vim.notify("Development binary not found. Have you built the project?", vim.log.levels.ERROR)
+    return nil
 end
 
 local function find_root_dir(fname)
